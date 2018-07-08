@@ -6,7 +6,7 @@
 
   <div class="panel-body">
 
-      <form class="form-horizontal">
+      <form class="form-horizontal" [formGroup]="registrationForm">
 
           <fieldset>
             
@@ -15,7 +15,7 @@
                   <label class="col-md-2 control-label" for="firstName">First Name</label> 
 
                   <div class="col-md-8">
-                    <input id="firstName" class="form-control" type="text" placeholder="First Name (required)"/>
+                    <input id="firstName" class="form-control" type="text" placeholder="First Name (required)" formControlName="firstName"/>
                   </div>
               </div>
 
@@ -24,7 +24,7 @@
                 <label class="col-md-2 control-label" for="lastName">Last Name</label> 
 
                 <div class="col-md-8">
-                  <input id="lastName" class="form-control" type="text" placeholder="Last Name (required)"/>
+                  <input id="lastName" class="form-control" type="text" placeholder="Last Name (required)" formControlName="lastName"/>
                 </div>
             </div>
 
@@ -33,7 +33,7 @@
               <label class="col-md-2 control-label" for="email">Email</label> 
 
               <div class="col-md-8">
-                <input id="email" class="form-control" type="email" placeholder="Email (required)"/>
+                <input id="email" class="form-control" type="email" placeholder="Email (required)" formControlName="email"/>
               </div>
           </div>
 
@@ -41,7 +41,7 @@
             <div class="col-md-offset-1 col-md-8 checkbox" >
                 <label>
                     <input id="sendNewsLetter"
-                           type="checkbox" >
+                           type="checkbox" formControlName="sendNewsLetter">
                     Send weekly news letter
                 </label>
             </div>
@@ -52,7 +52,7 @@
           <div class="col-md-4 col-md-offset-2">
               <span>
                   <button class="btn btn-primary"
-                          type="submit">
+                          type="submit" [disabled]="!registrationForm.valid">
                       Submit
                   </button>
               </span>
