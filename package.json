@@ -1,6 +1,9 @@
 {
   "name": "angular-forms",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "author": "Andy Knight",
+  "license": "MIT",
+  "description": "Just a sample app to demonstrate angular forms",
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o",
@@ -23,7 +26,7 @@
     "core-js": "^2.5.4",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26",
-    "bootstrap": "^3.3.7"
+    "bootstrap": "3.3.7"
   },
   "devDependencies": {
     "@angular/compiler-cli": "^6.0.3",
